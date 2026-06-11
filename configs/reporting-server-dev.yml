@@ -43,13 +43,13 @@ eureka:
       defaultZone: "{cipher}a5e31575de8a83babe9d44d906baf93563b80938cfc0c241d0cf8071e472bf0b212a7d6f7bc5b4d849d9bfac2a34bfd451c4203e7e5c6bde97942fe005b1add6"
 jhipster:
   mail:
-    from: "report@exampssle.com"
+    from: "report@example.com"
 server:
   port: 26085
 spring:
   datasource:
     password: "{cipher}0b48a9b5481b28a38dbdeb7c0af57b031a3ca2e831a5efe3ebcec834e7c4db294543a7d9dfd68f48f65084b301131f9e"
-    url: "jdbc:sqlserver://localhost:1433;database=reportserver;encrypt=false"
+    url: "jdbc:sqlserver://localhost:1433;database=reportserver-v2;encrypt=false"
     username: "{cipher}23973be85b276907f662233056f4846409b6a8c9338f8864dc15950e4702fc8aa4e0492aa9efe0dfa63a25b0e71801c1"
   mail:
     host: "mail.example.com"
