@@ -10,7 +10,7 @@ application:
     max-pool-size: 10
     password: "{cipher}4c7391f2cb3e75786fc6848a1414bdd021f8eb64e9392e52e905e2de2a0d8e53304b36c09ff89f80b34a97ea0f80ef9a"
     realm: "master"
-    server-url: "https://keycloak.example.comm"
+    server-url: "https://keycloak.example.com"
     trusted-audiences:
     - "sistas-eva"
     - "sistas-voice"
@@ -49,7 +49,7 @@ server:
 spring:
   datasource:
     password: "{cipher}0b48a9b5481b28a38dbdeb7c0af57b031a3ca2e831a5efe3ebcec834e7c4db294543a7d9dfd68f48f65084b301131f9e"
-    url: "jdbc:sqlserver://localhost:1433;database=reportserver-v2;encrypt=false"
+    url: "jdbc:sqlserver://localhost:1433;database=reportserver;encrypt=false"
     username: "{cipher}23973be85b276907f662233056f4846409b6a8c9338f8864dc15950e4702fc8aa4e0492aa9efe0dfa63a25b0e71801c1"
   mail:
     host: "mail.example.com"
