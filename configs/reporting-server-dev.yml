@@ -43,7 +43,7 @@ eureka:
       defaultZone: "{cipher}a5e31575de8a83babe9d44d906baf93563b80938cfc0c241d0cf8071e472bf0b212a7d6f7bc5b4d849d9bfac2a34bfd451c4203e7e5c6bde97942fe005b1add6"
 jhipster:
   mail:
-    from: "report@example.com"
+    from: "report@exampssle.com"
 server:
   port: 26085
 spring:
