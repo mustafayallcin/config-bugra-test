@@ -37,7 +37,7 @@ application.keycloak-admin.app-resource-id:
   encrypted: false
   rule: null
   restartRequired: true
-  defaultValue: "cc-solutions"
+  defaultValue: "sistas-cc-solution"
 application.keycloak-admin.app-resource-secret:
   configValueCount: "SINGLE"
   configValueType: "STRING"
@@ -47,7 +47,7 @@ application.keycloak-admin.app-resource-secret:
   encrypted: true
   rule: null
   restartRequired: true
-  defaultValue: "keycloak-resource-secret"
+  defaultValue: "resource-secret"
 application.keycloak-admin.client-id:
   configValueCount: "SINGLE"
   configValueType: "STRING"
@@ -97,20 +97,7 @@ application.keycloak-admin.server-url:
   encrypted: false
   rule: null
   restartRequired: true
-  defaultValue: "https://keycloak.example.com"
-application.keycloak-admin.trusted-audiences:
-  configValueCount: "LIST"
-  configValueType: "STRING"
-  displayName: "Keycloak Trusted Audiences"
-  description: "Comma-separated list of trusted audience values for JWT validation"
-  sectionName: "KEYCLOAK"
-  encrypted: false
-  rule: null
-  restartRequired: false
-  defaultValue:
-  - "sistas-eva"
-  - "sistas-voice"
-  - "chatbot"
+  defaultValue: "keycloak-url"
 application.keycloak-admin.username:
   configValueCount: "SINGLE"
   configValueType: "STRING"
@@ -120,7 +107,7 @@ application.keycloak-admin.username:
   encrypted: true
   rule: null
   restartRequired: false
-  defaultValue: "keycloak-admin-username"
+  defaultValue: "administrator"
 application.report-management.default-page-size:
   configValueCount: "SINGLE"
   configValueType: "LONG"
@@ -284,6 +271,21 @@ jhipster.mail.from:
   rule: null
   restartRequired: false
   defaultValue: "report@example.com"
+jhipster.security.oauth2.audience:
+  configValueCount: "LIST"
+  configValueType: "STRING"
+  displayName: "Audiences"
+  description: "Comma-separated list of trusted audience values for JWT validation"
+  sectionName: "AUDIENCES"
+  encrypted: false
+  rule: null
+  restartRequired: false
+  defaultValue:
+  - "account"
+  - "api://default"
+  - "sistas-chatbot"
+  - "sistas-eva"
+  - "sistas-voice"
 server.port:
   configValueCount: "SINGLE"
   configValueType: "LONG"
@@ -313,7 +315,7 @@ spring.datasource.url:
   encrypted: false
   rule: null
   restartRequired: true
-  defaultValue: "jdbc:sqlserver://localhost:1433;database=reportserver;encrypt=false"
+  defaultValue: "jdbc:sqlserver://localhost:1433;database=sis-report;encrypt=false"
 spring.datasource.username:
   configValueCount: "SINGLE"
   configValueType: "STRING"
