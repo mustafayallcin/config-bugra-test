@@ -1,0 +1,119 @@
+application:
+  conversation-share:
+    open-count: 5
+  elasticsearch:
+    enabled: false
+    real-time:
+      reindex-cron: "0 */30 * ? * *"
+      reindex-enabled: false
+      reindex-entities:
+      - "Agent"
+      reindex-size: 1000
+    scheduled:
+      reindex-cron: "0 */30 * ? * *"
+      reindex-enabled: false
+      reindex-entities:
+      - "CallPartyContext"
+      reindex-size: 1000
+    searchable-fields:
+    - "CallPartyContext.ani"
+    - "CallPartyContext.dnis"
+    selectable-fields:
+    - "CallPartyContext.userData1"
+    - "CallPartyContext.userData2"
+    skip-ssl: true
+  enabled-media-file-auto-delete: false
+  hazelcast:
+    port: 5701
+  keycloak-admin:
+    app-realm-id: "sistas"
+    app-resource-id: "sistas-voice"
+    app-resource-secret: "{cipher}70d55c762c03d473d1d8b245fcacd47eb2487f152eb8e4c3d78e05a3462c34e28a538dc4c394db20bc176dcc90bb3f889c8a11ad413670a3b02850a79bed8510"
+    client-id: "admin-cli"
+    max-pool-size: 10
+    password: "{cipher}1ae5a95e2aa38af39660ba5b6c37bcf53a79df6dcbe61aa69bce1788d78f116b"
+    realm: "master"
+    server-url: "http://localhost:9080"
+    username: "{cipher}2f6203110316680cd8e7a9d490f57f424d84c9bb565054e6c8b0c9419b1c371a"
+  media-file-cron: "0 28 18 * * *"
+  media-processor:
+    enabled: false
+  public-api:
+    devices-by-ip: true
+  remove-liquibase-lock: false
+  security:
+    key: "{cipher}09490a25feaca31a7fbe15e7388637ed40c13cba2d85d42b93efc4c1f24f1aeca89801429ee78cc0f5bab8fe22daac59"
+  sis-phone-properties:
+    enabled: true
+    password: "{cipher}8710bb8c74c8d759e40d8653ebf17ac5356a0644fa156c776eb6cd0f02503d254cc9f20faaa7f726b814b95211b3019c"
+    url: "sisphone-url"
+    username: "sisphone-username"
+batch-synchronization:
+  enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: "{cipher}90898818e32edfdb40e3963ab98b9925357e28ed9892a382088e8ae9ace3a82c7d75ad4749ced84a124ed20a8f64e4f07bece17ceb393c8ace0b42531519b9ac"
+jhipster:
+  security:
+    oauth2:
+      audience:
+      - "account"
+      - "api://default"
+      - "sistas-chatbot"
+      - "sistas-eva"
+      - "sistas-cc-solution"
+kafka:
+  bootstrap-servers: "localhost:9092"
+  configChangeTopic: "CONFIG_CHANGE_TOPIC"
+  consumer:
+    auto:
+      offset:
+        reset: "latest"
+    group:
+      id: "voice-search"
+  different-group-id-consumer:
+    auto:
+      offset:
+        reset: "latest"
+    group:
+      id: "voice-search-${spring.application.instance-id:${random.value}}"
+  enabled: true
+  sendAckTimeoutSeconds: 10
+  sendRetryDelaySeconds: 2
+  sendRetrySchedulerThreads: 8
+  topics:
+    number-of-partitions: 1
+    replication-factor: 1
+not-ready-reason:
+  default-provider: "sisphone"
+rest-call-process:
+  access-token: "{cipher}d8afe9c555ef540fa12b2eadeb86cc69e82c6ab862d831078c464759e15f9b76"
+  location-server-type: "VOICESERVER"
+  media-location-path: "/opt/sistas/voiceserver/datafiles/source"
+search-list:
+  size: 50
+security:
+  api-access:
+    access-token: "{cipher}2451339259b932ffe365238fc39a74df0a37d541bc5cb373600e9830e141bd39a29022b1ee693d468214c6b9dc7ac52c11b139e822940d89c2e6e87d65ac4e0f"
+    enabled: true
+server:
+  port: 8081
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
+  datasource:
+    password: "{cipher}0ee2b72bffb0909c4c5f16ac0d675944b131398fb58219bbd492fa98270d877a"
+    url: "jdbc:sqlserver://localhost:1433;database=svr;encrypt=true;trustServerCertificate=true"
+    username: "{cipher}c058f3d8bd63f31a16f275e6248f32c1644ed1b7ff2e21ebb179a5a7b52663d9"
+  elasticsearch:
+    password: "{cipher}9dea2ee0b8faa53ee93c98b7011862a945299cc18801fa0ca31a3c780e55df5afe64a8b22d634230aadc129668a77fef"
+    uris: "http://localhost:9200"
+    username: "elastic"
+user-data-config:
+  enabled: true
+  instance-name: "USER_DATA"
+  profile: "dev"
