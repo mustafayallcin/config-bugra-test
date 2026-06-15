@@ -40,7 +40,7 @@ application:
 eureka:
   client:
     service-url:
-      defaultZone: "{cipher}a5e31575de8a83babe9d44d906baf93563b80938cfc0c241d0cf8071e472bf0b212a7d6f7bc5b4d849d9bfac2a34bfd451c4203e7e5c6bde97942fe005b1add6"
+      defaultZone: "{cipher}cdf52af82f41837f872a579115914817f98ddabec19f700951b4aaa4519171b7"
 jhipster:
   mail:
     from: "report@examplasdase.com"
