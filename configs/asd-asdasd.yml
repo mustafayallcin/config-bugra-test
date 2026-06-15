@@ -1,0 +1,74 @@
+application:
+  microservice-configuration:
+    hazelcast:
+      discovery-mechanism: "lite_member"
+      lite-member:
+        cluster-members: "statserver"
+        instance-port-padding: 5701
+  service-time-configuration:
+    service-time1-lower-bound: 0
+    service-time1-upper-bound: 10
+    service-time2-lower-bound: 10
+    service-time2-upper-bound: 20
+    service-time3-lower-bound: 20
+    service-time3-upper-bound: 30
+    service-time4-lower-bound: 30
+    service-time4-upper-bound: 60
+  svr-configuration:
+    url: "http://127.0.0.1:8080"
+eureka:
+  client:
+    service-url:
+      defaultZone: "{cipher}54ce2d890a6d60da05ee1dc7ac06728e13a98199c64745ede40fe37620bb839fad1cb7d84f600d229fe2a0534f7340ad02d05dda2e1d84251affb2c212ba20e4"
+jhipster:
+  security:
+    oauth2:
+      audience:
+      - "account"
+      - "api://default"
+      - "sistas-chatbot"
+      - "sistas-eva"
+      - "sistas-voice"
+kafka:
+  agentMessageTopic: "AGENT_MESSAGE_TOPIC"
+  bootstrap-servers: "localhost:9092"
+  callMessageTopic: "CALL_MESSAGE_TOPIC"
+  configChangeTopic: "CONFIG_CHANGE_TOPIC"
+  consumer:
+    auto:
+      offset:
+        reset: "latest"
+    group:
+      id: "stat-server-${spring.application.instance-id:${random.value}}"
+  generalMessageTopic: "GENERAL_MESSAGE_TOPIC"
+  topics:
+    number-of-partitions: 1
+    replication-factor: 1
+scheduled:
+  clear-all-statistics:
+    cron: "0 0 0 1/1 * ?"
+  config:
+    changed-states-interval: 10000
+    changed-statistics-interval: 30000
+    cron: "0 0/10 * * * ?"
+security:
+  api-access:
+    access-token: "{cipher}4df05981d4cc0aa7e4e9e982307b2181723d01c78d9ad223405d0b45c00fab64ca4ed530914dde0eb8ad7a0de9b6834fdbea1f494865fba9c989bda2cef517fb"
+server:
+  port: 26081
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: "keycloak-url"
+        registration:
+          oidc:
+            client-id: "sistas-cc-solution"
+            client-secret: "{cipher}587943b075bb5a3c06b7c62f5604af829c1d32cd82622d0618ddc3d156508e8b"
