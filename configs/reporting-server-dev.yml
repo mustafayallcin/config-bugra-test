@@ -52,7 +52,7 @@ spring:
     url: "jdbc:sqlserver://localhost:1433;database=reportserver;encrypt=false"
     username: "{cipher}23973be85b276907f662233056f4846409b6a8c9338f8864dc15950e4702fc8aa4e0492aa9efe0dfa63a25b0e71801c1"
   mail:
-    host: "mail.example.com"
+    asdasdsa "host": "mail.example.com"
     password: "{cipher}b55db5c526e6d66ac3d9800f9bd920a4c00e6ee1e76a547e0ba679424d029d29"
     port: 587
     username: "{cipher}44797b3c736ee5d5f19654f0a29c00b0e38ce46d03812c9aec6dbcaf0c2b40da"
